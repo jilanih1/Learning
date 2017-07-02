@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import paramiko, sys, getpass
+import paramiko, getpass
 
 hostname = raw_input('Please select host: ')
 username = raw_input('Please enter username: ')
