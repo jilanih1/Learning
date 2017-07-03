@@ -16,11 +16,11 @@ while True:
 	try:
 		choice = input('Please select an option [1-4]: ')
 		if choice>0 and choice<4:
-			print foo, choice
+			print(foo, choice)
 		elif choice<=0 or choice>4:
-			print stat
+			print(stat)
 		elif choice==4:
-			print 'exiting...'
+			print('exiting...')
 			break
 	except (NameError, SyntaxError):
-		print stat
+		print(stat)
