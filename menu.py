@@ -3,8 +3,7 @@
 
 var = 'select option # '
 foo = 'you have selected option #:'
-stat1 = 'Invalid selection. Please try again.'
-stat2 = 'Please select an option [1-4]: '
+stat = 'Invalid selection. Please try again.'
 
 def menu():
 	print('-' * 10 + 'choices' + '-' * 10)
@@ -17,13 +16,13 @@ def menu():
 while True:
 	menu()
 	try:
-		choice = input(stat2)
+		choice = input('Please select an option [1-4]: ')
 		if choice>0 and choice<4:
 			print foo, choice
 		elif choice<=0 or choice>4:
-			print stat1
+			print stat
 		elif choice==4:
 			print 'exiting...'
 			break
 	except (NameError, SyntaxError):
-		print stat1
+		print stat
