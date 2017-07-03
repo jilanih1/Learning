@@ -1,15 +1,13 @@
 #!/usr/bin/env python
 # Menu using while loop
 
-var = 'select option # '
 foo = 'you have selected option #:'
 stat = 'Invalid selection. Please try again.'
 
 def menu():
 	print('-' * 10 + 'choices' + '-' * 10)
-	print('1: ' + var + '1')
-	print('2: ' + var + '2')
-	print('3: ' + var + '3')
+	for x in range(1,4):
+		print('%d: Select option #: %d' % (x,x))
 	print('4: exit')
 	print('-' * 27)
 
