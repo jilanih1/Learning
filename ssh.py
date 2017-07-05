@@ -14,8 +14,8 @@ stdout, stderr = pinghost.communicate()
 if pinghost.returncode == 0:
 	print 'Host is pingable, continuing...'
 	try:
-		command = raw_input('please enter a Linux command: ')
 		ssh.connect(hostname, port=22, username=username, password=password)
+		command = raw_input('please enter a Linux command: ')
 		stdin,stdout,stderr = ssh.exec_command(command)
 		type(stdin)
 		print command
