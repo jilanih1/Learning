@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#Example: how to input a string if an option is not selected while initially.
+#Example: how to input a string if an option is not selected initially.
 
 import argparse
 
