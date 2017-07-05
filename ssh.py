@@ -18,7 +18,6 @@ if pinghost.returncode == 0:
 		command = raw_input('please enter a Linux command: ')
 		stdin,stdout,stderr = ssh.exec_command(command)
 		type(stdin)
-		print command
 		print stdout.read()
 
 	except paramiko.AuthenticationException:
