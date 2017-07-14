@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Menu using while loop
 
 from __future__ import print_function
@@ -17,7 +17,7 @@ def menu():
 while True:
 	menu()
 	try:
-		choice = input('Please select an option [1-4]: ')
+		choice = int(input('Please select an option [1-4]: '))
 		if choice>0 and choice<4:
 			print(foo, choice)
 		elif choice<=0 or choice>4:
