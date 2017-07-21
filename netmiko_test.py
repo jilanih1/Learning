@@ -30,11 +30,15 @@ net_connect = ConnectHandler(**device)
 #Enters enable mode:
 net_connect.enable()
 #Output from 'show command':
-output = net_connect.send_command_expect('show running-config')
+output1 = net_connect.send_command_expect('show running-config')
+output2 = net_connect.send_command_expect('show running-config diffs')[:-1] 
 
-print('\033[91m' + 'running config from ' + host + ':')
-print('*' * 50 + '\033[0m')
-print(output)
+print('\033[91m' + '*' * 50)
+print('Running-config from ' + host + ':' + '\n' + '*' * 50 + '\033[0m')
+print(output1)
+print('\033[91m' + '*' * 50 + '\033[0m')
+print('\033[91m' + 'Differences from startup-config:' + '\n' + '*' * 50 + '\033[0m')
+print(output2)
 print('\033[91m' + '*' * 50 + '\033[0m')
 
 #Terminates SSH session:
