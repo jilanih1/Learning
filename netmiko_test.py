@@ -44,4 +44,4 @@ if __name__ == '__main__':
 	#Terminates SSH session:
 	net_connect.disconnect()
 
-sys.exit(1)
+sys.exit(0)
